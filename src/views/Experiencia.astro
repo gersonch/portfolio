@@ -27,7 +27,7 @@ const { role, duration, responsabilities, skillsUsed } = Astro.props;
                         <br />
                     </>
               ))}</p>
-            <div class="flex flex-wrap gap-4">
+            <div class="flex flex-wrap gap-y-4">
                 {skillsUsed.map((skill) => (
                     <BadgeHabilities>{skill}</BadgeHabilities>
                 ))}

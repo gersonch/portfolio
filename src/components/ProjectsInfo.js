@@ -31,6 +31,6 @@ export const projectsInfo = [
       "Express",
     ],
     alt: "Tornegors",
-    href: "https://comunidadclan.cl/",
+    href: "https://tornegors-web-gerson-contreras-projects.vercel.app/",
   },
 ];
