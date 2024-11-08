@@ -11,16 +11,22 @@ interface Props {
 const { role, duration, responsabilities, skillsUsed } = Astro.props;
 ---
 
-<div class="my-4 cursor-pointer">
-    <section class="w-full max-w-3xl mx-auto mb-40 hover:bg-slate-500/20 transition-all px-8 py-6 rounded-xl flex justify-between">
-        <div class="w-full px-4">
+<div class=" cursor-pointer mb-4">
+    <section class="w-full max-w-3xl mx-auto hover:bg-slate-500/20 transition-all px-8 py-6 rounded-xl flex justify-between">
+        <div class="w-1/3 px-4">
             <span class="text-white/60" >
                 {duration}
             </span>
         </div>
-        <div class="w-auto">
+        <div class="w-2/3">
             <h3 class="mb-4 font-semibold">{role}</h3>
-            <p class="text-pretty text-white/60 mb-4">{responsabilities}</p>
+            <p class="text-pretty text-white/60 mb-4">  
+                {responsabilities.split('\n').map((line, index) => (
+                    <>
+                        {line}
+                        <br />
+                    </>
+              ))}</p>
             <div class="flex">
                 {skillsUsed.map((skill) => (
                     <BadgeHabilities>{skill}</BadgeHabilities>

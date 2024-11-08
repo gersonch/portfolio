@@ -14,9 +14,9 @@ import { projectsInfo } from '../components/ProjectsInfo';
 
 <Layout title="Portafolio Gerson Contreras - Desarrollador Web.">
   <NavBar />
-  <main>
-    <section class="max-w-3xl flex flex-col justify-center mx-auto pt-44 pb-52">
-      <div class="flex items-center pb-4 my-5 gap-4">
+  <main class="px-4">
+    <section class="max-w-3xl flex flex-col justify-center mx-auto pt-44 pb-52 ">
+      <div class="flex items-center pb-4 my-5 gap-4 flex-col md:flex-row">
         <h1 class="text-white text-5xl font-bold flex justify-center flex-row">Hola, Soy Gerson</h1>
         <div>
           <a href="https://www.linkedin.com/in/gerson-contreras-h/" target="_blank">
@@ -35,7 +35,7 @@ import { projectsInfo } from '../components/ProjectsInfo';
         Especializado en crear Aplicaciones web únicas. 
       </h2>
 
-      <nav class="flex gap-x-3 mt-5">
+      <nav class="flex  mt-5 gap-4 p-2 flex-wrap md:flex-nowrap max-w-lg  ">
         <SocialPill href="https://www.linkedin.com/in/gerson-contreras-h/">
           <Linkedin class="size-6" />
           LinkedIn
@@ -52,8 +52,8 @@ import { projectsInfo } from '../components/ProjectsInfo';
     </section>
 
     <section id="experience">
-      <h2 class="font-semibold text-xl">Experiencia</h2>
-      <div>
+      <h2 class="font-bold text-2xl">Experiencia</h2>
+      <div class="mb-40">
         {experienceInfo.map((experience) => (
            (
             <Experiencia 
@@ -66,9 +66,9 @@ import { projectsInfo } from '../components/ProjectsInfo';
       </div>
     </section>
 
-    <section id="projects">
-      <h2 class="font-semibold text-xl mb-4">Proyectos</h2>
-      <div >
+    <section id="projects ">
+      <h2 class="font-bold text-2xl">Proyectos</h2>
+      <div class="mb-20" >
         {projectsInfo.map((project) => (
           <Projects 
             project={project.project}
@@ -88,7 +88,7 @@ import { projectsInfo } from '../components/ProjectsInfo';
 
 <style>
 	body {
-		background-color: #000e1c;
+		background-color: #000c18;
 		
 
 	/* Fondo oscuro */

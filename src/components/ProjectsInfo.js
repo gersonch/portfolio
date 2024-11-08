@@ -18,8 +18,8 @@ export const projectsInfo = [
     href: "https://comunidadclan.cl/",
   },
   {
-    project: "Página Web - Tornegors",
-    img: "../../public/comunidad-clan.png",
+    project: "Página Web - Tornegors (En desarrollo)",
+    img: "../../public/tornegors.png",
     description:
       "Aplicación web en la cual es utilizada para mantener informada a la comunidad educativa del colegio",
     skillsUsed: [
@@ -30,7 +30,7 @@ export const projectsInfo = [
       "PostgreSQL",
       "Express",
     ],
-    alt: "Comunidad Clan",
+    alt: "Tornegors",
     href: "https://comunidadclan.cl/",
   },
 ];
