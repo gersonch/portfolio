@@ -13,10 +13,10 @@ import { projectsInfo } from '../components/ProjectsInfo';
 ---
 
 <Layout title="Portafolio Gerson Contreras - Desarrollador Web.">
-  <NavBar />
-  <main class="px-4 text-white">
-    <section class="max-w-3xl flex flex-col justify-center mx-auto pt-32 pb-20 sm:pt-44 sm:pb-52">
-      <div class="flex items-center pb-4 my-5 gap-4 flex-col md:flex-row text-center md:text-left">
+  <main class="px-8 text-white flex flex-col md:flex-row items-start md:h-screen max-w-7xl justify-between">
+    <!-- Primera sección fija -->
+    <section class="flex flex-col justify-start mx-auto pt-32 pb-20 sm:pt-44 sm:pb-52 md:sticky top-0 md:h-full" id="left-section">
+      <div class="flex items-start pb-4 my-5 gap-4 flex-col text-center md:text-left">
         <h1 class="text-white text-4xl sm:text-5xl font-bold">Hola, Soy Gerson</h1>
         <div>
           <a href="https://www.linkedin.com/in/gerson-contreras-h/" target="_blank" rel="noopener noreferrer">
@@ -30,7 +30,6 @@ import { projectsInfo } from '../components/ProjectsInfo';
         <span>&#x1F1E8;&#x1F1F1;</span>. 
         Especializado en crear Aplicaciones web únicas.
       </h2>
-
       <nav class="flex mt-5 gap-4 p-2 flex-wrap max-w-lg md:max-w-xl justify-start">
         <SocialPill href="https://www.linkedin.com/in/gerson-contreras-h/">
           <Linkedin class="size-6" />
@@ -47,39 +46,54 @@ import { projectsInfo } from '../components/ProjectsInfo';
       </nav>
     </section>
 
-    <section id="experience" class="px-2 ">
-      <h2 class="font-bold text-xl md:text-2xl text-left">Experiencia</h2>
-      <div class="mb-20 space-y-8 w-full ">
-        {experienceInfo.map((experience) => (
-          <Experiencia 
-            role={experience.role} 
-            duration={experience.duration} 
-            responsabilities={experience.responsibilities} 
-            skillsUsed={experience.skillsUsed}/>
-        ))}
-      </div>
-    </section>
-
-    <section id="projects" class="px-2 md:px-0">
-      <h2 class="font-bold text-xl md:text-2xl">Proyectos</h2>
-      <div class="mb-20 space-y-8">
-        {projectsInfo.map((project) => (
-          <Projects 
-            project={project.project}
-            img={project.img}
-            description={project.description}
-            skillsUsed={project.skillsUsed}
-            alt={project.alt}
-            href={project.href}
-          />
-        ))}
-      </div>
-    </section>
+    <!-- Segunda sección desplazable -->
+    <div class="flex flex-col overflow-y-auto h-full mt-10" id="right-section">
+      <section id="experience" class="px-2">
+        <h2 class="font-bold text-xl md:text-2xl text-left">Experiencia</h2>
+        <div class="mb-20 space-y-8 w-full">
+          {experienceInfo.map((experience) => (
+            <Experiencia
+              role={experience.role}
+              duration={experience.duration}
+              responsabilities={experience.responsibilities}
+              skillsUsed={experience.skillsUsed}/>
+          ))}
+        </div>
+      </section>
+      <section id="projects" class="px-2 md:px-0">
+        <h2 class="font-bold text-xl md:text-2xl">Proyectos</h2>
+        <div class="mb-20 space-y-8">
+          {projectsInfo.map((project) => (
+            <Projects
+              project={project.project}
+              img={project.img}
+              description={project.description}
+              skillsUsed={project.skillsUsed}
+              alt={project.alt}
+              href={project.href}
+            />
+          ))}
+        </div>
+      </section>
+    </div>
   </main>
 </Layout>
 
+<script>
+  // Sincronización de scroll solo en pantallas grandes
+  const leftSection = document.getElementById('left-section');
+  const rightSection = document.getElementById('right-section');
+
+  if (window.innerWidth >= 768) {
+    leftSection.addEventListener('wheel', (e) => {
+      rightSection.scrollTop += e.deltaY;
+      e.preventDefault();
+    });
+  }
+</script>
+
 <style>
-	body {
+  body {
 		background-color: #000c18;
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'%3E%3Cdefs%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='4' result='turbulence'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer in='turbulence'%3E%3CfeFuncA type='table' tableValues='0.1 0.3 0.1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3C/defs%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.6'/%3E%3C/svg%3E");
 		background-size: cover;
@@ -91,4 +105,14 @@ import { projectsInfo } from '../components/ProjectsInfo';
 	span {
 		font-family: 'Noto Color Emoji', sans-serif;
 	}
+
+  #right-section {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  #right-section::-webkit-scrollbar {
+    display: none;
+  }
 </style>
+
