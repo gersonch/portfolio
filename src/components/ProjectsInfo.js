@@ -1,7 +1,7 @@
 export const projectsInfo = [
   {
     project: "Página Web - Colegio Alcázares de Ñuble",
-    img: "../../public/colegio-alcazares.png",
+    img: "./colegio-alcazares.png",
     description:
       "Aplicación web en la cual es utilizada para mantener informada a la comunidad educativa del colegio",
     skillsUsed: ["Javascript", "AstroJs", "TailwindCSS"],
@@ -10,7 +10,7 @@ export const projectsInfo = [
   },
   {
     project: "Página Web - Comunidad Clan (En desarrollo)",
-    img: "../../public/comunidad-clan.png",
+    img: "./comunidad-clan.png",
     description:
       "Aplicación web en la cual es utilizada para mantener informada a la comunidad educativa del colegio",
     skillsUsed: ["Javascript", "AstroJs", "TailwindCSS"],
@@ -19,7 +19,7 @@ export const projectsInfo = [
   },
   {
     project: "Página Web - Tornegors (En desarrollo)",
-    img: "../../public/tornegors.png",
+    img: "./tornegors.png",
     description:
       "Aplicación web en la cual es utilizada para mantener informada a la comunidad educativa del colegio",
     skillsUsed: [
