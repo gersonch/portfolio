@@ -15,27 +15,23 @@ import { projectsInfo } from '../components/ProjectsInfo';
 <Layout title="Portafolio Gerson Contreras - Desarrollador Web.">
   <NavBar />
   <main class="px-4">
-    <section class="max-w-3xl flex flex-col justify-center mx-auto pt-44 pb-52 ">
-      <div class="flex items-center pb-4 my-5 gap-4 flex-col md:flex-row">
-        <h1 class="text-white text-5xl font-bold flex justify-center flex-row">Hola, Soy Gerson</h1>
+    <section class="max-w-3xl flex flex-col justify-center mx-auto pt-32 pb-20 sm:pt-44 sm:pb-52">
+      <div class="flex items-center pb-4 my-5 gap-4 flex-col md:flex-row text-center md:text-left">
+        <h1 class="text-white text-4xl sm:text-5xl font-bold">Hola, Soy Gerson</h1>
         <div>
           <a href="https://www.linkedin.com/in/gerson-contreras-h/" target="_blank" rel="noopener noreferrer">
             <Badge>Disponible para trabajar</Badge>
           </a>
         </div>
       </div>
-      <h2 class="text-lg opacity-85 text-pretty">+1
-        <span class="text-blue-300 font-bold"> 
-          año de experiencia.</span> Desarrollador Web
-        </span>. 
-        <span class="text-red-300 font-bold">
-          De Chillan, Chile
-        </span> 
+      <h2 class="text-base sm:text-lg opacity-85 text-pretty">
+        +1 <span class="text-blue-300 font-bold">año de experiencia.</span> Desarrollador Web 
+        <span class="text-red-300 font-bold">De Chillan, Chile</span> 
         <span>&#x1F1E8;&#x1F1F1;</span>. 
-        Especializado en crear Aplicaciones web únicas. 
+        Especializado en crear Aplicaciones web únicas.
       </h2>
 
-      <nav class="flex  mt-5 gap-4 p-2 flex-wrap md:flex-nowrap max-w-lg  ">
+      <nav class="flex mt-5 gap-4 p-2 flex-wrap max-w-lg md:max-w-xl justify-start">
         <SocialPill href="https://www.linkedin.com/in/gerson-contreras-h/">
           <Linkedin class="size-6" />
           LinkedIn
@@ -46,29 +42,27 @@ import { projectsInfo } from '../components/ProjectsInfo';
         </SocialPill>
         <SocialPill href="mailto:gersonch97@gmail.com">
           <MailIcon class="size-6" />
-          gersonch97@gmail.com
+          contacto@gersonch.dev
         </SocialPill>
       </nav>
     </section>
 
-    <section id="experience">
-      <h2 class="font-bold text-2xl">Experiencia</h2>
-      <div class="mb-40">
+    <section id="experience" class="px-2 ">
+      <h2 class="font-bold text-xl md:text-2xl text-left">Experiencia</h2>
+      <div class="mb-20 space-y-8 w-full ">
         {experienceInfo.map((experience) => (
-           (
-            <Experiencia 
-              role={experience.role} 
-              duration={experience.duration} 
-              responsabilities={experience.responsibilities} 
-              skillsUsed={experience.skillsUsed}/>
-          )
+          <Experiencia 
+            role={experience.role} 
+            duration={experience.duration} 
+            responsabilities={experience.responsibilities} 
+            skillsUsed={experience.skillsUsed}/>
         ))}
       </div>
     </section>
 
-    <section id="projects ">
-      <h2 class="font-bold text-2xl">Proyectos</h2>
-      <div class="mb-20" >
+    <section id="projects" class="px-2 md:px-0">
+      <h2 class="font-bold text-xl md:text-2xl">Proyectos</h2>
+      <div class="mb-20 space-y-8">
         {projectsInfo.map((project) => (
           <Projects 
             project={project.project}
@@ -84,14 +78,9 @@ import { projectsInfo } from '../components/ProjectsInfo';
   </main>
 </Layout>
 
-
-
 <style>
 	body {
 		background-color: #000c18;
-		
-
-	/* Fondo oscuro */
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'%3E%3Cdefs%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='4' result='turbulence'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer in='turbulence'%3E%3CfeFuncA type='table' tableValues='0.1 0.3 0.1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3C/defs%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.6'/%3E%3C/svg%3E");
 		background-size: cover;
 		background-position: center center;
