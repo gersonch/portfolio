@@ -1,0 +1,34 @@
+---
+import BadgeHabilities from "../components/BadgeHabilities.astro";
+
+interface Props {
+    project: string;
+    img: string;     
+    description: string;
+    skillsUsed: string[];
+    alt: string;
+    href: string;
+}
+
+const { project, img, description, skillsUsed, alt, href } = Astro.props;
+---
+
+
+<div class="my-4">
+    <a  href={href} target="_blank">
+        <section class=" max-w-3xl mx-auto hover:bg-slate-500/20 transition-all px-8 py-6 rounded-xl flex justify-between gap-12">
+            <div class="px-4">
+                <img src={img} alt={alt} width="150px">
+            </div>
+            <div class="w-auto">
+                <h3 class="mb-4 font-semibold">{project}</h3>
+                <p class="text-pretty text-white/60 mb-4">{description}</p>
+                <div class="flex flex-wrap max-w-sm gap-y-4">
+                    {skillsUsed.map((skill) => (
+                        <BadgeHabilities>{skill}</BadgeHabilities>
+                    ))}
+                </div>
+            </div>
+        </section>
+    </a>
+</div>
