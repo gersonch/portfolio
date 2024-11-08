@@ -10,13 +10,14 @@ import Experiencia from '../views/Experiencia.astro';
 import { experienceInfo } from '../components/ExperienceInfo';
 import Projects from '../views/Projects.astro';
 import { projectsInfo } from '../components/ProjectsInfo';
+import Skills from '../views/Skills.astro'
 ---
 
 <Layout title="Portafolio Gerson Contreras - Desarrollador Web.">
-  <main class="px-8 text-white flex flex-col md:flex-row items-start md:h-screen max-w-7xl justify-between">
+  <main class="px-8 text-white flex flex-col md:flex-row md:h-screen max-w-7xl justify-between">
     <!-- Primera sección fija -->
-    <section class="flex flex-col justify-start mx-auto pt-32 pb-20 sm:pt-44 sm:pb-52 md:sticky top-0 md:h-full" id="left-section">
-      <div class="flex items-start pb-4 my-5 gap-4 flex-col text-center md:text-left">
+    <section class="flex flex-col gap-y-4 mx-auto pt-10 md:sticky md:h-full " id="left-section">
+      <div class="flex justify-start pb-4 my-5 gap-4 flex-col">
         <h1 class="text-white text-4xl sm:text-5xl font-bold">Hola, Soy Gerson</h1>
         <div>
           <a href="https://www.linkedin.com/in/gerson-contreras-h/" target="_blank" rel="noopener noreferrer">
@@ -44,10 +45,12 @@ import { projectsInfo } from '../components/ProjectsInfo';
           contacto@gersonch.dev
         </SocialPill>
       </nav>
+      <NavBar />
+      <Skills />
     </section>
 
     <!-- Segunda sección desplazable -->
-    <div class="flex flex-col overflow-y-auto h-full mt-10" id="right-section">
+    <div class="flex flex-col overflow-y-scroll h-full pt-10" id="right-section">
       <section id="experience" class="px-2">
         <h2 class="font-bold text-xl md:text-2xl text-left">Experiencia</h2>
         <div class="mb-20 space-y-8 w-full">
