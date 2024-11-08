@@ -1,0 +1,31 @@
+---
+import BadgeHabilities from "../components/BadgeHabilities.astro";
+
+interface Props {
+    role: string;
+    duration: string;     
+    responsabilities: string;
+    skillsUsed: string[]; // Cambiado a array de strings
+}
+
+const { role, duration, responsabilities, skillsUsed } = Astro.props;
+---
+
+<div class="my-4 cursor-pointer">
+    <section class="w-full max-w-3xl mx-auto mb-40 hover:bg-slate-500/20 transition-all px-8 py-6 rounded-xl flex justify-between">
+        <div class="w-full px-4">
+            <span class="text-white/60" >
+                {duration}
+            </span>
+        </div>
+        <div class="w-auto">
+            <h3 class="mb-4 font-semibold">{role}</h3>
+            <p class="text-pretty text-white/60 mb-4">{responsabilities}</p>
+            <div class="flex">
+                {skillsUsed.map((skill) => (
+                    <BadgeHabilities>{skill}</BadgeHabilities>
+                ))}
+            </div>
+        </div>
+    </section>
+</div>
