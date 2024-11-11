@@ -12,7 +12,7 @@ export const projectsInfo = [
     project: "Página Web - Comunidad Clan (En desarrollo)",
     img: "./comunidad-clan.png",
     description:
-      "Aplicación web en la cual es utilizada para mantener informada a la comunidad educativa del colegio",
+      "Pagina web - Comunidad Clan. Aplicacion orientada a mostrar al mundo los eventos y mensajes espirituales",
     skillsUsed: ["Javascript", "AstroJs", "TailwindCSS"],
     alt: "Comunidad Clan",
     href: "https://comunidadclan.cl/",
@@ -21,7 +21,7 @@ export const projectsInfo = [
     project: "Página Web - Tornegors (En desarrollo)",
     img: "./tornegors.png",
     description:
-      "Aplicación web en la cual es utilizada para mantener informada a la comunidad educativa del colegio",
+      "Aplicación Web – Orientada a la creación de torneos en los que las personas pueden organizar sus propios campeonatos. La plataforma permitirá a los usuarios configurar torneos personalizados, agregar participantes y gestionar todas las etapas del torneo de manera sencilla e intuitiva. La herramienta está diseñada para brindar flexibilidad y una experiencia accesible, de modo que cualquiera pueda crear y disfrutar de sus propios torneos, sin importar el tipo de competencia.",
     skillsUsed: [
       "Javascript",
       "React",
