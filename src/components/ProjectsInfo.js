@@ -1,5 +1,21 @@
 export const projectsInfo = [
   {
+    project: "Página Web - Minigames",
+    img: "./minigames.png",
+    description:
+      "Aplicacion web - Orientada al entretenimiento con juegos interactivos como Wordle, sopa de letras y otros juegos de palabras.",
+    skillsUsed: [
+      "Javascript",
+      "React",
+      "TailwindCSS",
+      "NodeJS",
+      "PostgreSQL",
+      "Express",
+    ],
+    alt: "minigames",
+    href: "https://minigames-beta.vercel.app/",
+  },
+  {
     project: "Página Web - Colegio Alcázares de Ñuble",
     img: "./colegio-alcazares.png",
     description:
@@ -32,21 +48,5 @@ export const projectsInfo = [
     ],
     alt: "Tornegors",
     href: "https://tornegors-web-gerson-contreras-projects.vercel.app/",
-  },
-  {
-    project: "Página Web - Minigames",
-    img: "./minigames.png",
-    description:
-      "Aplicacion web - Orientada al entretenimiento con juegos interactivos como Wordle, sopa de letras y otros juegos de palabras.",
-    skillsUsed: [
-      "Javascript",
-      "React",
-      "TailwindCSS",
-      "NodeJS",
-      "PostgreSQL",
-      "Express",
-    ],
-    alt: "minigames",
-    href: "https://minigames-beta.vercel.app/",
   },
 ];
