@@ -1,5 +1,30 @@
 export const projectsInfo = [
   {
+    project: "Aplicacion movil - My court app (En desarrollo)",
+    img: "./reservas.jpg",
+    description:
+      "Aplicación móvil para reservar canchas deportivas (tenis, fútbol o pádel) y gestionar la inscripción a torneos organizados por los complejos.\n\n Incluye una API para la administración de usuarios, reservas, torneos y estadísticas. \n\nActualmente se está desarrollando un panel de administración para que los complejos deportivos gestionen sus actividades de forma eficiente.",
+    skillsUsed: [
+      "Typescript",
+      "React-Native",
+      "Expo",
+      "NodeJS",
+      "MongoDB",
+      "NestJS",
+    ],
+    alt: "My court app",
+    href: "https://expo.dev/preview/update?message=para+preview&updateRuntimeVersion=1.0.0&createdAt=2025-07-21T18%3A47%3A43.003Z&slug=exp&projectId=93c8e793-497f-49a0-a3c1-510cad5e0e31&group=c4f0874f-4b70-4e0d-8029-1d61e0b6318d",
+  },
+  {
+    project: "Página Web - Comunidad Clan (En desarrollo)",
+    img: "./comunidad-clan.png",
+    description:
+      "Pagina web - Comunidad Clan. Aplicacion orientada a mostrar al mundo los eventos y mensajes espirituales",
+    skillsUsed: ["Javascript", "AstroJs", "TailwindCSS"],
+    alt: "Comunidad Clan",
+    href: "https://comunidadclan.cl/",
+  },
+  {
     project: "Página Web - Minigames",
     img: "./minigames.png",
     description:
@@ -15,6 +40,7 @@ export const projectsInfo = [
     alt: "minigames",
     href: "https://minigames-beta.vercel.app/",
   },
+
   {
     project: "Página Web - Colegio Alcázares de Ñuble",
     img: "./colegio-alcazares.png",
@@ -22,17 +48,9 @@ export const projectsInfo = [
       "Aplicación web en la cual es utilizada para mantener informada a la comunidad educativa del colegio",
     skillsUsed: ["Javascript", "AstroJs", "TailwindCSS"],
     alt: "Colegio Alcázares de Ñuble",
-    href: "https://vercel.com/gerson-contreras-projects/colegio-alcazares/8u1nmWnsPz2YhcdcWRGva2BGFVvv",
+    href: "https://colegio-alcazares-git-main-gerson-contreras-projects.vercel.app/",
   },
-  {
-    project: "Página Web - Comunidad Clan (En desarrollo)",
-    img: "./comunidad-clan.png",
-    description:
-      "Pagina web - Comunidad Clan. Aplicacion orientada a mostrar al mundo los eventos y mensajes espirituales",
-    skillsUsed: ["Javascript", "AstroJs", "TailwindCSS"],
-    alt: "Comunidad Clan",
-    href: "https://comunidadclan.cl/",
-  },
+
   {
     project: "Página Web - Tornegors (En desarrollo)",
     img: "./tornegors.png",

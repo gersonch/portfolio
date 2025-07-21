@@ -26,10 +26,10 @@ import Skills from '../views/Skills.astro'
         </div>
       </div>
       <h2 class="text-base sm:text-lg opacity-85 text-pretty">
-        +1 <span class="text-blue-300 font-bold">año de experiencia.</span> Desarrollador Web 
-        <span class="text-red-300 font-bold">De Chillan, Chile</span> 
-        <span>&#x1F1E8;&#x1F1F1;</span>. 
-        Especializado en crear Aplicaciones web únicas.
+        +2 <span class="text-blue-300 font-bold">años de experiencia.</span> Desarrollador web y mobile, front end y back end,
+        <span class="text-red-300 font-bold">De Chillan, Chile</span>
+        <span>&#x1F1E8;&#x1F1F1;</span>.<br />
+        Especializado en crear Aplicaciones web y mobile únicas.
       </h2>
       <nav class="flex  gap-4 p-2 flex-wrap max-w-lg md:max-w-xl justify-start">
         <SocialPill href="https://www.linkedin.com/in/gerson-contreras-h/">
@@ -50,7 +50,10 @@ import Skills from '../views/Skills.astro'
     </section>
 
     <!-- Segunda sección desplazable -->
-    <div class="flex flex-col overflow-y-scroll h-full pt-10" id="right-section">
+    <div class="flex flex-col overflow-y-scroll h-full pt-10 mt-10" id="right-section">
+      <section class="font-bold text-xl md:text-2xl text-left opacity-0" id="inicio">
+        <h3>Resumen</h3>
+      </section>
       
       <section id="experience" class="px-2">
         <h2 class="font-bold text-xl md:text-2xl text-left">Experiencia</h2>
@@ -98,25 +101,49 @@ import Skills from '../views/Skills.astro'
 
 <style>
   body {
-		background-color: #000c18;
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'%3E%3Cdefs%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='4' result='turbulence'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer in='turbulence'%3E%3CfeFuncA type='table' tableValues='0.1 0.3 0.1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3C/defs%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.6'/%3E%3C/svg%3E");
-		background-size: cover;
-		background-position: center center;
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-	}
-	
-	span {
-		font-family: 'Noto Color Emoji', sans-serif;
-	}
+    background-color: #000c18;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'%3E%3Cdefs%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='4' result='turbulence'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer in='turbulence'%3E%3CfeFuncA type='table' tableValues='0.1 0.3 0.1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3C/defs%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.6'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Oculta el scrollbar general */
+    padding-top: 2rem;
+  }
 
-  #right-section {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  @media (max-width: 767px) {
+    body {
+      overflow: auto ; 
+    }
   }
   
-  #right-section::-webkit-scrollbar {
-    display: none;
+  span {
+    font-family: 'Noto Color Emoji', sans-serif;
   }
+
+  
+  
+  #right-section::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+#right-section::-webkit-scrollbar-thumb {
+  /* gris claro*/
+  background: #4a5568;
+  border-radius: 8px;
+}
+
+#right-section::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body {
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari y Opera */
+}
 </style>
 
