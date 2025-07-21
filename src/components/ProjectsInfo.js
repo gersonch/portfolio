@@ -22,7 +22,7 @@ export const projectsInfo = [
       "Aplicación web en la cual es utilizada para mantener informada a la comunidad educativa del colegio",
     skillsUsed: ["Javascript", "AstroJs", "TailwindCSS"],
     alt: "Colegio Alcázares de Ñuble",
-    href: "https://colegioalcazaresdenuble.cl/",
+    href: "https://vercel.com/gerson-contreras-projects/colegio-alcazares/8u1nmWnsPz2YhcdcWRGva2BGFVvv",
   },
   {
     project: "Página Web - Comunidad Clan (En desarrollo)",
