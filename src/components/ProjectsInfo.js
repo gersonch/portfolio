@@ -1,5 +1,14 @@
 export const projectsInfo = [
   {
+    project: "CLI - Interface Generator (En desarrollo)",
+    img: "./CLI.png",
+    description:
+      "Herramienta para generar interfaces TypeScript automáticamente a partir de modelos o esquemas, facilitando la integración de tipados en proyectos. (De momento solo admite Schemas de Mongoose)",
+    skillsUsed: ["Typescript", "NodeJS", "MongoDB", "NPM"],
+    alt: "CLI - Interface Generator",
+    href: "https://www.npmjs.com/package/@negors/interface-generator",
+  },
+  {
     project: "Aplicacion movil - My court app (En desarrollo)",
     img: "./reservas.jpg",
     description:
