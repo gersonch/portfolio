@@ -1,5 +1,31 @@
 export const projectsInfo = [
   {
+<<<<<<< HEAD
+    project: "E-commerce - OneMoreGameStore",
+    img: "./onemoregame.png",
+    description:
+      "E-commerce (demo). venta de componentes y accesorios para PC gamer. \n\n Incluye un sistema de carrito de compras, gestión de productos y procesamiento de pagos simulado. \n\n Cuenta tambien con un chatbot alimentado por ia para consultas de clientes \n\n Desarrollado con Next.js para el frontend y Supabase para la gestion de la base de datos y autenticación de usuarios.",
+    skillsUsed: [
+      "Typescript",
+      "NextJS",
+      "Supabase",
+      "TailwindCSS",
+      "OpenAI API",
+      "n8n",
+    ],
+    alt: "E-commerce OneMoreGameStore",
+    href: "https://onemoregame-store.vercel.app/",
+=======
+    project: "CLI - Interface Generator (En desarrollo)",
+    img: "./CLI.png",
+    description:
+      "Herramienta para generar interfaces TypeScript automáticamente a partir de modelos o esquemas, facilitando la integración de tipados en proyectos. (De momento solo admite Schemas de Mongoose)",
+    skillsUsed: ["Typescript", "NodeJS", "MongoDB", "NPM"],
+    alt: "CLI - Interface Generator",
+    href: "https://www.npmjs.com/package/@negors/interface-generator",
+>>>>>>> 57396dc9e563769595704952e21adcc7b27917f6
+  },
+  {
     project: "Aplicacion movil - My court app (En desarrollo)",
     img: "./reservas.jpg",
     description:
