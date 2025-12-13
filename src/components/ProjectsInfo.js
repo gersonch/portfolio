@@ -1,6 +1,5 @@
 export const projectsInfo = [
   {
-<<<<<<< HEAD
     project: "E-commerce - OneMoreGameStore",
     img: "./onemoregame.png",
     description:
@@ -15,7 +14,8 @@ export const projectsInfo = [
     ],
     alt: "E-commerce OneMoreGameStore",
     href: "https://onemoregame-store.vercel.app/",
-=======
+  },
+  {
     project: "CLI - Interface Generator (En desarrollo)",
     img: "./CLI.png",
     description:
@@ -23,7 +23,6 @@ export const projectsInfo = [
     skillsUsed: ["Typescript", "NodeJS", "MongoDB", "NPM"],
     alt: "CLI - Interface Generator",
     href: "https://www.npmjs.com/package/@negors/interface-generator",
->>>>>>> 57396dc9e563769595704952e21adcc7b27917f6
   },
   {
     project: "Aplicacion movil - My court app (En desarrollo)",
