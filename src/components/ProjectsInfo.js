@@ -1,21 +1,5 @@
 export const projectsInfo = [
   {
-    project: "E-commerce - OneMoreGameStore",
-    img: "./onemoregame.png",
-    description:
-      "E-commerce (demo). venta de componentes y accesorios para PC gamer. \n\n Incluye un sistema de carrito de compras, gestión de productos y procesamiento de pagos simulado. \n\n Cuenta tambien con un chatbot alimentado por ia para consultas de clientes \n\n Desarrollado con Next.js para el frontend y Supabase para la gestion de la base de datos y autenticación de usuarios.",
-    skillsUsed: [
-      "Typescript",
-      "NextJS",
-      "Supabase",
-      "TailwindCSS",
-      "OpenAI API",
-      "n8n",
-    ],
-    alt: "E-commerce OneMoreGameStore",
-    href: "https://onemoregame-store.vercel.app/",
-  },
-  {
     project: "Aplicacion movil - My court app (En desarrollo)",
     img: "./reservas.jpg",
     description:

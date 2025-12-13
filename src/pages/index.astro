@@ -55,18 +55,7 @@ import Skills from '../views/Skills.astro'
         <h3>Resumen</h3>
       </section>
       
-      <section id="experience" class="px-2">
-        <h2 class="font-bold text-xl md:text-2xl text-left">Experiencia</h2>
-        <div class="mb-20 space-y-8 w-full">
-          {experienceInfo.map((experience) => (
-            <Experiencia
-              role={experience.role}
-              duration={experience.duration}
-              responsabilities={experience.responsibilities}
-              skillsUsed={experience.skillsUsed}/>
-          ))}
-        </div>
-      </section>
+      
       <section id="projects" class="px-2 md:px-0">
         <h2 class="font-bold text-xl md:text-2xl">Proyectos</h2>
         <div class="mb-20 space-y-8">
@@ -79,6 +68,18 @@ import Skills from '../views/Skills.astro'
               alt={project.alt}
               href={project.href}
             />
+          ))}
+        </div>
+      </section>
+      <section id="experience" class="px-2">
+        <h2 class="font-bold text-xl md:text-2xl text-left">Experiencia</h2>
+        <div class="mb-20 space-y-8 w-full">
+          {experienceInfo.map((experience) => (
+            <Experiencia
+              role={experience.role}
+              duration={experience.duration}
+              responsabilities={experience.responsibilities}
+              skillsUsed={experience.skillsUsed}/>
           ))}
         </div>
       </section>
