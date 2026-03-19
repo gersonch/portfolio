@@ -14,51 +14,72 @@ import Skills from '../views/Skills.astro'
 ---
 
 <Layout title="Portafolio Gerson Contreras - Desarrollador Web.">
-  <main class="px-8 text-white flex flex-col md:flex-row md:h-screen max-w-7xl justify-between">
-    <!-- Primera sección fija -->
-    <section class="flex flex-col gap-y-4 mx-auto pt-10 md:sticky md:h-full " id="left-section">
-      <div class="flex justify-start pb-2 my-2 gap-4 flex-col">
-        <h1 class="text-white text-4xl sm:text-5xl font-bold">Hola, Soy Gerson</h1>
-        <div>
-          <a href="https://www.linkedin.com/in/gerson-contreras-h/" target="_blank" rel="noopener noreferrer">
-            <Badge>Disponible para trabajar </Badge>
+  <div class="relative flex flex-col lg:flex-row min-h-screen">
+    <!-- SIDEBAR FIJO -->
+    <aside class="lg:fixed lg:top-0 lg:left-0 lg:w-[45%] xl:w-[40%] lg:h-screen flex flex-col justify-between px-8 py-12 lg:py-16 lg:pl-[8%] lg:pr-12 z-10">
+      <div class="flex flex-col gap-y-6">
+        <!-- Header -->
+        <div class="flex flex-col gap-y-3">
+          <h1 class="text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
+            Hola, Soy Gerson
+          </h1>
+          <p class="text-lg text-blue-400 font-medium">Desarrollador Web & Mobile</p>
+          <a href="https://www.linkedin.com/in/gerson-contreras-h/" target="_blank" rel="noopener noreferrer" class="w-fit">
+            <Badge>Disponible para trabajar</Badge>
           </a>
         </div>
+
+        <!-- Bio -->
+        <p class="text-base text-white/60 leading-relaxed max-w-md">
+          +2 <span class="text-blue-300 font-semibold">años de experiencia.</span> 
+          Desarrollador web y mobile, front end y back end.
+          <span class="text-purple-300 font-semibold">De Chillán, Chile</span>
+          <span>&#x1F1E8;&#x1F1F1;</span>.<br />
+          Especializado en crear aplicaciones web y mobile únicas.
+        </p>
+
+        <!-- Navegación -->
+        <NavBar />
+
+        <!-- Skills -->
+        <Skills />
       </div>
-      <h2 class="text-base sm:text-lg opacity-85 text-pretty">
-        +2 <span class="text-blue-300 font-bold">años de experiencia.</span> Desarrollador web y mobile, front end y back end,
-        <span class="text-red-300 font-bold">De Chillan, Chile</span>
-        <span>&#x1F1E8;&#x1F1F1;</span>.<br />
-        Especializado en crear Aplicaciones web y mobile únicas.
-      </h2>
-      <nav class="flex  gap-4 p-2 flex-wrap max-w-lg md:max-w-xl justify-start">
+
+      <!-- Social Links al fondo del sidebar -->
+      <nav class="flex gap-3 flex-wrap mt-8 lg:mt-0">
         <SocialPill href="https://www.linkedin.com/in/gerson-contreras-h/">
-          <Linkedin class="size-3" />
+          <Linkedin class="size-4" />
           LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/gersonch">
-          <Github class="size-3" />
+          <Github class="size-4" />
           Github
         </SocialPill>
         <SocialPill href="mailto:gersonch97@gmail.com">
-          <MailIcon class="size-3" />
+          <MailIcon class="size-4" />
           gersonch97@gmail.com
         </SocialPill>
       </nav>
-      <NavBar />
-      <Skills />
-    </section>
+    </aside>
 
-    <!-- Segunda sección desplazable -->
-    <div class="flex flex-col overflow-y-scroll h-full pt-10 mt-10" id="right-section">
-      <section class="font-bold text-xl md:text-2xl text-left opacity-0" id="inicio">
-        <h3>Resumen</h3>
+    <!-- CONTENIDO SCROLLABLE -->
+    <main class="lg:ml-[45%] xl:ml-[40%] w-full lg:w-[55%] xl:w-[60%] min-h-screen px-8 py-12 lg:py-16 lg:pr-[8%] lg:pl-12" id="main-content">
+      <!-- Resumen -->
+      <section id="inicio" class="mb-20">
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="glass-card p-6 lg:p-8">
+          <p class="text-white/70 leading-relaxed text-base">
+            Soy un desarrollador apasionado por crear experiencias digitales que combinan funcionalidad 
+            y diseño. Me especializo en tecnologías web modernas y desarrollo mobile, siempre buscando 
+            soluciones creativas y eficientes para cada proyecto.
+          </p>
+        </div>
       </section>
-      
-      
-      <section id="projects" class="px-2 md:px-0">
-        <h2 class="font-bold text-xl md:text-2xl">Proyectos</h2>
-        <div class="mb-20 space-y-8">
+
+      <!-- Proyectos -->
+      <section id="projects" class="mb-20">
+        <h2 class="section-title">Proyectos</h2>
+        <div class="space-y-6">
           {projectsInfo.map((project) => (
             <Projects
               project={project.project}
@@ -71,80 +92,48 @@ import Skills from '../views/Skills.astro'
           ))}
         </div>
       </section>
-      <section id="experience" class="px-2">
-        <h2 class="font-bold text-xl md:text-2xl text-left">Experiencia</h2>
-        <div class="mb-20 space-y-8 w-full">
+
+      <!-- Experiencia -->
+      <section id="experience" class="mb-20">
+        <h2 class="section-title">Experiencia</h2>
+        <div class="space-y-6">
           {experienceInfo.map((experience) => (
             <Experiencia
               role={experience.role}
               duration={experience.duration}
               responsabilities={experience.responsibilities}
-              skillsUsed={experience.skillsUsed}/>
+              skillsUsed={experience.skillsUsed}
+            />
           ))}
         </div>
       </section>
-    </div>
-  </main>
+    </main>
+  </div>
 </Layout>
 
 <script>
-  // Sincronización de scroll solo en pantallas grandes
-  const leftSection = document.getElementById('left-section');
-  const rightSection = document.getElementById('right-section');
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('[data-nav-link]');
 
-  if (window.innerWidth >= 768) {
-    leftSection.addEventListener('wheel', (e) => {
-      rightSection.scrollTop += e.deltaY;
-      e.preventDefault();
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        navLinks.forEach((link) => link.classList.remove('active'));
+        const activeLink = document.querySelector(`[data-nav-link][href="#${entry.target.id}"]`);
+        if (activeLink) activeLink.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach((section) => observer.observe(section));
+
+  // Sync wheel from sidebar to main content on large screens
+  const sidebar = document.querySelector('aside');
+  const mainContent = document.getElementById('main-content');
+  if (window.innerWidth >= 1024 && sidebar && mainContent) {
+    sidebar.addEventListener('wheel', (e) => {
+      window.scrollBy(0, e.deltaY);
     });
   }
 </script>
-
-<style>
-  body {
-    background-color: #000c18;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'%3E%3Cdefs%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='4' result='turbulence'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer in='turbulence'%3E%3CfeFuncA type='table' tableValues='0.1 0.3 0.1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3C/defs%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.6'/%3E%3C/svg%3E");
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    overflow: hidden; /* Oculta el scrollbar general */
-    padding-top: 2rem;
-  }
-
-  @media (max-width: 767px) {
-    body {
-      overflow: auto ; 
-    }
-  }
-  
-  span {
-    font-family: 'Noto Color Emoji', sans-serif;
-  }
-
-  
-  
-  #right-section::-webkit-scrollbar {
-  width: 8px;
-  background: transparent;
-}
-
-#right-section::-webkit-scrollbar-thumb {
-  /* gris claro*/
-  background: #4a5568;
-  border-radius: 8px;
-}
-
-#right-section::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-body {
-  -ms-overflow-style: none;  /* IE y Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-body::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari y Opera */
-}
-</style>
-

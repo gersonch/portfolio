@@ -14,21 +14,24 @@ const { project, img, description, skillsUsed, alt, href } = Astro.props;
 ---
 
 
-<div class="my-4">
-    <a  href={href} target="_blank">
-        <section class=" max-w-3xl mx-auto hover:bg-slate-500/20 transition-all p-4 rounded-xl flex justify-between">
-            <div class="px-4 w-1/3">
-                <img src={img} alt={alt} width="150px">
+<a href={href} target="_blank" rel="noopener noreferrer" class="block group">
+    <article class="glass-card-hover p-5 flex flex-col sm:flex-row gap-5">
+        <div class="sm:w-1/3 flex-shrink-0 overflow-hidden rounded-lg">
+            <img src={img} alt={alt} class="w-full h-auto object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        <div class="sm:w-2/3 flex flex-col gap-3">
+            <h3 class="font-semibold text-white group-hover:text-blue-300 transition-colors duration-300 flex items-center gap-2">
+                {project}
+                <svg class="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+            </h3>
+            <p class="text-sm text-white/50 leading-relaxed">{description}</p>
+            <div class="flex flex-wrap gap-1 mt-auto">
+                {skillsUsed.map((skill) => (
+                    <BadgeHabilities>{skill}</BadgeHabilities>
+                ))}
             </div>
-            <div class="w-2/3">
-                <h3 class="mb-4 font-semibold">{project}</h3>
-                <p class="text-pretty text-white/60 mb-4">{description}</p>
-                <div class="flex flex-wrap max-w-sm gap-y-4">
-                    {skillsUsed.map((skill) => (
-                        <BadgeHabilities>{skill}</BadgeHabilities>
-                    ))}
-                </div>
-            </div>
-        </section>
-    </a>
-</div>
+        </div>
+    </article>
+</a>
