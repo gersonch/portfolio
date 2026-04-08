@@ -11,7 +11,7 @@ export const experienceInfo = [
     duration: "2024 - Presente",
     responsibilities:
       "Responsable de diseñar, desarrollar y mejorar aplicaciones web que funcionen bien y que ofrezcan experiencias únicas.\n \n Con un enfoque en cubrir necesidades específicas de los usuarios, centrándome en crear aplicaciones que combinan funcionalidad y una calidad de experiencia destacada.",
-    skillsUsed: ["Javascript", "AstroJs", "TailwindCSS"],
+    skillsUsed: ["Javascript", "AstroJs", "TailwindCSS", "ReactJS", "NextJS", "PostgreSQL", "MongoDB", "Supabase", "NestJS"],
   },
   {
     role: "Colegio Alcázares de Ñuble - Encargado sala de enlaces",

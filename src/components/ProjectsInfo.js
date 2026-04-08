@@ -1,5 +1,21 @@
 export const projectsInfo = [
   {
+    project: "Extensión Google Chrome - Ai Email Enhancer",
+    img: "./demo-usage.png",
+    description:
+      "Extensión para Google Chrome diseñada para mejorar la redacción de correos mediante inteligencia artificial. \n\n Permite al usuario optimizar sus textos en tiempo real, sin salir de la pantalla, ofreciendo sugerencias inmediatas para mejorar la claridad, el tono y la traducción o cambio de idioma del mensaje. \n\n Además, si quieres, permite utilizar tu propia API key de OpenAI para acceder al servicio sin restricciones.",
+    skillsUsed: [
+      "Typescript",
+      "React",
+      "Supabase",
+      "OpenAI API",
+      "Plasmo",
+      "PostgreSQL",
+    ],
+    alt: "Extensión Google Chrome - Ai Email Enhancer",
+    href: "https://github.com/gersonch/ai-email-enhancer",
+  },
+  {
     project: "E-commerce - OneMoreGameStore",
     img: "./onemoregame.png",
     description:
