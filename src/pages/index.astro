@@ -11,6 +11,7 @@ import { experienceInfo } from '../components/ExperienceInfo';
 import Projects from '../views/Projects.astro';
 import { projectsInfo } from '../components/ProjectsInfo';
 import Skills from '../views/Skills.astro'
+import Document from '../icons/Document.astro';
 ---
 
 <Layout title="Portafolio Gerson Contreras - Desarrollador Web.">
@@ -23,7 +24,7 @@ import Skills from '../views/Skills.astro'
           <h1 class="text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
             Hola, Soy Gerson
           </h1>
-          <p class="text-lg text-blue-400 font-medium">Desarrollador Web & Mobile</p>
+          <p class="text-lg text-blue-400 font-medium">Desarrollador Full Stack</p>
           <a href="https://www.linkedin.com/in/gerson-contreras-h/" target="_blank" rel="noopener noreferrer" class="w-fit">
             <Badge>Disponible para trabajar</Badge>
           </a>
@@ -32,7 +33,7 @@ import Skills from '../views/Skills.astro'
         <!-- Bio -->
         <p class="text-base text-white/60 leading-relaxed max-w-md">
           +2 <span class="text-blue-300 font-semibold">años de experiencia.</span> 
-          Desarrollador web y mobile, front end y back end.
+          Desarrollador full stack,
           <span class="text-purple-300 font-semibold">De Chillán, Chile</span>
           <span>&#x1F1E8;&#x1F1F1;</span>.<br />
           Especializado en crear aplicaciones web y mobile únicas.
@@ -58,6 +59,11 @@ import Skills from '../views/Skills.astro'
         <SocialPill href="mailto:gersonch97@gmail.com">
           <MailIcon class="size-4" />
           gersonch97@gmail.com
+        </SocialPill>
+        <SocialPill href="./Gerson-Contreras-CV.pdf" target="_blank">
+          <Document />
+          Descargar CV
+            
         </SocialPill>
       </nav>
     </aside>
